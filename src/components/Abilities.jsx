@@ -16,7 +16,7 @@ const Abilities = () => {
       <GoProjectRoadmap className="text-white text-2xl "/>
         <h1 className="text-gray-200 text-[1.5rem] md:text-3xl">Habilidades Técnicas</h1>
       </div>
-      <div className="flex items-center flex-wrap text-center justify-start bg-secondary rounded-lg gap-10 md:gap-10 p-6 text-text mt-2 text-[.8rem]">
+      <div className="flex items-center flex-wrap text-center justify-start bg-secondary rounded-lg gap-8 md:gap-10 p-6 text-text mt-2 text-[.8rem]">
         <div className="flex flex-col items-center gap-1 "> 
           <h5 className="text-gray-200 md:text-[1rem]">React</h5>
           <FaReact className="text-[2rem] md:text-[4rem] text-blue-500 " />
