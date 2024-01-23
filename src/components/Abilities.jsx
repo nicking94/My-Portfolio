@@ -11,15 +11,15 @@ import { SiTailwindcss } from "react-icons/si";
 
 const Abilities = () => {
   return (
-    <div className="flex flex-col mt-16 mx-auto w-80 md:w-full md:p-7">
-      <div className="flex justify-start gap-4 font-semibold md:mt-20">
-      <GoProjectRoadmap className="text-white text-3xl"/>
-        <h1 className="text-gray-200 text-[1.5rem] md:text-3xl mb-4">Habilidades Técnicas</h1>
+    <div className="flex flex-col mt-16 mx-auto w-[86%] md:w-full md:p-7">
+      <div className="flex items-center gap-4 font-semibold md:mt-20 mb-4">
+      <GoProjectRoadmap className="text-white text-2xl "/>
+        <h1 className="text-gray-200 text-[1.5rem] md:text-3xl">Habilidades Técnicas</h1>
       </div>
       <div className="flex items-center flex-wrap text-center justify-start bg-secondary rounded-lg gap-10 md:gap-10 p-6 text-text mt-2 text-[.8rem]">
-        <div className="flex flex-col items-center gap-1"> 
+        <div className="flex flex-col items-center gap-1 "> 
           <h5 className="text-gray-200 md:text-[1rem]">React</h5>
-          <FaReact className="text-[2rem] md:text-[4rem] text-blue-500" />
+          <FaReact className="text-[2rem] md:text-[4rem] text-blue-500 " />
         </div>
         <div className="flex flex-col items-center gap-1">
           <h5 className="text-gray-200 md:text-[1rem]">Javascript</h5>
