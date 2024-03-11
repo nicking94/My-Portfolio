@@ -15,18 +15,18 @@ const Hero = () => {
         <h1 className="text-[2.2rem] md:text-[3rem] text-white mr-0 md:mr-4 text-center mb-2">
           Hey, Soy Nicking
         </h1>
-        <a href="https://wa.me/2613077147"><button className="text-[.8rem] bg-secondary text-gray-200 rounded-full px-4 py-1 hover:scale-105 border-2 border-green-600">
+        <a href="https://wa.me/2613077147"><button className="text-[.8rem] bg-secondary text-gray-200 rounded-full px-4 py-1 hover:scale-105 border-2 border-green-600 transition-transform ">
           Disponible para trabajar
         </button></a>
       </div>
       <div className="mt-4 md:mt-8">
         <h2 className="text-[1.2rem] md:text-2xl text-gray-200">
           +1 año de experiencia.
-          <span className="text-yellow-200"> Desarrollador Web</span>.
-          <span className="text-red-300"> De Mendoza, Argentina</span>.
+          <span className="text-yellow-200"> Desarrollador Web</span>
+          <span className="text-green-300"> de Mendoza, Argentina</span>.
           <span className="text-blue-200">
             {" "}
-            Especializado en crear interfaces Unicas.
+            Especializado en crear interfaces únicas.
           </span>
         </h2>
       </div>

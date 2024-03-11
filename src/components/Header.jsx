@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className="flex justify-center md:w-full">
       <nav
-        className={` text-gray-200 bg-secondary rounded-full mt-2 md:mt-5 py-1 px-2 md:px-8 text-[.9rem] md:text-[1.1rem] font-medium fixed ${
+        className={` text-gray-200 z-20 bg-secondary rounded-full mt-2 md:mt-5 py-1 px-2 md:px-8 text-[.9rem] md:text-[1.1rem] font-medium fixed ${
           isScrolled ? "backdrop-blur-md bg-tertiary/60 underline" : ""
         } `}
       >

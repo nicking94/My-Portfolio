@@ -11,6 +11,7 @@ import { SiTailwindcss } from "react-icons/si";
 {
   /* Screenshots webs */
 }
+import ecommerce from "../assets/ecommerce.png";
 import calculadora from "../assets/calculadora.png";
 import drgula from "../assets/drgula.png";
 import matt from "../assets/matt.png";
@@ -25,123 +26,273 @@ const Projects = () => {
     <section id="proyectos" className="px-7">
       <div className="flex mt-14 md:mt-28 gap-4 font-semibold">
         <PiCode className="text-text text-3xl" />
-        <h1 className="text-gray-200 text-[1.5rem] md:text-3xl mb-4">Proyectos Recientes</h1>
+        <h1 className="text-gray-200 text-[1.5rem] md:text-3xl mb-4">
+          Proyectos Recientes
+        </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2 px-7 py-5 bg-secondary rounded-lg">
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />{" "}
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">CSS</span>
-            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px]">JAVASCRIPT</span>
-          </div>
-          <a href="https://drgula.netlify.app/">
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={drgula} alt="proyecto-1" />
-          </a>
-        </div>
+        <a href="https://dieteticadiamante.netlify.app/">
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-18 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">
+                E-commerce con carro de compras. Diseño de figma a código.
+              </p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                TAILWIND
+              </span>
+              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px]">
+                JAVASCRIPT
+              </span>
+            </div>
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={ecommerce}
+              alt="proyecto-1"
+            />
+          </div>{" "}
+        </a>
+        <a href="https://drgula.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">
+                Landing page para hamburguesería local.
+              </p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />{" "}
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                CSS
+              </span>
+              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px]">
+                JAVASCRIPT
+              </span>
+            </div>
 
-        <div className="mb-2">
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={drgula}
+              alt="proyecto-1"
+            />
+          </div>{" "}
+        </a>
+
+        <div className="relative mb-2">
+          <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+            <p className="text-center">Diseño de figma a código con React.</p>
+          </div>
           <div className="flex items-center w-full gap-1 rounded-xl mb-2">
             <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
+            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              HTML
+            </span>
             <FaReact className="text-blue-500 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">REACT</span>
+            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              REACT
+            </span>
             <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">TAILWIND</span>
+            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              TAILWIND
+            </span>
           </div>
           <a href="https://template-nk.netlify.app/">
             {" "}
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={template1} alt="proyecto-2" />
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={template1}
+              alt="proyecto-2"
+            />
           </a>
         </div>
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">CSS</span>
-            <BsBootstrapFill className="text-violet-500 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">BOOTSTRAP</span>
+        <a href="https://pokedex-nk.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">
+                Práctica de consumo de API creando una pokedex.
+              </p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <FaReact className="text-blue-500 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                REACT
+              </span>
+              <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                TAILWIND
+              </span>
+            </div>
+
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={pokeapi}
+              alt="proyecto-8"
+            />
+          </div>{" "}
+        </a>
+        <a href="https://modocromatico.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">
+                Landing page para negocio de sublimaciones.
+              </p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                CSS
+              </span>
+              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JAVASCRIPT
+              </span>
+              <DiJqueryLogo className="text-blue-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JQUERY
+              </span>
+            </div>{" "}
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={modocv2}
+              alt="proyecto-7"
+            />
           </div>
-          <a href="https://nicking.netlify.app/">
-            {" "}
-            <img className="hover:scale-110 duration-300 border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={nicking} alt="proyecto-3" />
-          </a>
-        </div>
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">CSS</span>
-            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">JAVASCRIPT</span>
+        </a>
+        <a href="https://nicking.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">Landing page para artista musical.</p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                CSS
+              </span>
+              <BsBootstrapFill className="text-violet-500 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                BOOTSTRAP
+              </span>
+            </div>{" "}
+            <img
+              className="w-full hover:scale-110 duration-300 border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={nicking}
+              alt="proyecto-3"
+            />
+          </div>{" "}
+        </a>
+        <a href="https://shirley-nailss.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">
+                Landing page para local de realización de uñas.
+              </p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                CSS
+              </span>
+              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JAVASCRIPT
+              </span>
+            </div>{" "}
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={shirley}
+              alt="proyecto-4"
+            />
           </div>
-          <a href="https://shirley-nailss.netlify.app/">
-            {" "}
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={shirley} alt="proyecto-4" />
-          </a>
-        </div>
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">CSS</span>
-            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">JAVASCRIPT</span>
-          </div>
-          <a href="https://calculadora-js-nk.netlify.app/">
-            {" "}
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={calculadora} alt="proyecto-5" />
-          </a>
-        </div>
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">CSS</span>
-            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">JAVASCRIPT</span>
-          </div>
-          <a href="https://mattarmoagaming.netlify.app/">
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={matt} alt="proyecto-6" />
-          </a>
-        </div>
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">CSS</span>
-            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">JAVASCRIPT</span>
-            <DiJqueryLogo className="text-blue-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">JQUERY</span>
-          </div>
-          <a href="https://modocromatico.netlify.app/">
-            {" "}
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={modocv2} alt="proyecto-7" />
-          </a>
-        </div>
-        <div className="mb-2">
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">HTML</span>
-            <FaReact className="text-blue-500 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">REACT</span>
-            <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">TAILWIND</span>
-          </div>
-          <a href="https://pokedex-nk.netlify.app/">
-            <img className="hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary" src={pokeapi} alt="proyecto-8" />
-          </a>
-        </div>
+        </a>
+        <a href="https://calculadora-js-nk.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">Calculadora.</p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                CSS
+              </span>
+              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JAVASCRIPT
+              </span>
+            </div>{" "}
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={calculadora}
+              alt="proyecto-5"
+            />
+          </div>{" "}
+        </a>
+        <a href="https://mattarmoagaming.netlify.app/">
+          {" "}
+          <div className="relative mb-2">
+            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+              <p className="text-center">Landing page para Streamer.</p>
+            </div>
+            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                HTML
+              </span>
+              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                CSS
+              </span>
+              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JAVASCRIPT
+              </span>
+            </div>
+
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={matt}
+              alt="proyecto-6"
+            />
+          </div>{" "}
+        </a>
+        
       </div>
-      
     </section>
   );
 };
