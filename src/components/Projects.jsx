@@ -33,9 +33,9 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2 px-7 py-5 bg-secondary rounded-lg">
         <a href="https://dieteticadiamante.netlify.app/">
           <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-18 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+          <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
               <p className="text-center">
-                E-commerce con carro de compras. Diseño de figma a código.
+                E-commerce con carro de compras. Diseño de Figma a código.
               </p>
             </div>
             <div className="flex items-center w-full gap-1 rounded-xl mb-2">
