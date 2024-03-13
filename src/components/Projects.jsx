@@ -51,6 +51,10 @@ const Projects = () => {
               <span className="text-white text-[.4rem] md:text-[15px]">
                 JAVASCRIPT
               </span>
+              <DiJqueryLogo className="text-blue-600 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JQUERY
+              </span>
             </div>
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"

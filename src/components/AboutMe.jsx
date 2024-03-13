@@ -19,7 +19,7 @@ const AboutMe = () => {
               de pawn (Counter Strike Zombie Mod). <br /><br /> Actualmente me
               encuentro enfocado en el <span className="text-yellow-400">desarrollo web</span> aprendiendo nuevas
               tecnologias y especializandome en <span className="text-yellow-400 font-serif">frontend</span> para luego
-              aprender mas sobre <span className="text-green-400 font-serif ">backend</span>. <br /><br />
+              aprender más sobre <span className="text-green-400 font-serif ">backend</span>. <br /><br />
               Mi objetivo es poder <span className="text-yellow-400">brindar mis conocimientos</span> para la resolución de
               problemas y búsqueda de soluciones.
             </p>

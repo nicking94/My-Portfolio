@@ -21,8 +21,8 @@ const Hero = () => {
       </div>
       <div className="mt-4 md:mt-8">
         <h2 className="text-[1.2rem] md:text-2xl text-gray-200">
-          +1 año de experiencia.
-          <span className="text-yellow-200"> Desarrollador Web</span>
+          +2 años de experiencia.
+          <span className="text-yellow-200"> Desarrollador web</span>
           <span className="text-green-300"> de Mendoza, Argentina</span>.
           <span className="text-blue-200">
             {" "}
