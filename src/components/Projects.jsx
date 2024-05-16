@@ -12,6 +12,7 @@ import { SiTailwindcss } from "react-icons/si";
   /* Screenshots webs */
 }
 import ecommerce from "../assets/ecommerce.png";
+import StHelen from "../assets/St_Helen.png"
 import calculadora from "../assets/calculadora.png";
 import drgula from "../assets/drgula.png";
 import matt from "../assets/matt.png";
@@ -59,7 +60,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={ecommerce}
-              alt="proyecto-1"
+              alt="Diamante-Natural"
             />
           </div>{" "}
         </a>
@@ -68,7 +69,7 @@ const Projects = () => {
           <div className="relative mb-2">
             <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
               <p className="text-center">
-                Landing page para hamburguesería local.
+                Landing page para hamburguesería.
               </p>
             </div>
             <div className="flex items-center w-full gap-1 rounded-xl mb-2">
@@ -89,10 +90,39 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={drgula}
-              alt="proyecto-1"
+              alt="Dr-Gula"
             />
           </div>{" "}
         </a>
+
+
+        <div className="relative mb-2">
+          <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+            <p className="text-center">Web English Institute.</p>
+          </div>
+          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
+            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
+            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              HTML
+            </span>
+            <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
+            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              TAILWIND
+            </span>
+            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
+              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+                JAVASCRIPT
+              </span>
+          </div>
+          <a href="https://sthelen.netlify.app">
+            {" "}
+            <img
+              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
+              src={StHelen}
+              alt="St-Helen"
+            />
+          </a>
+        </div>
 
         <div className="relative mb-2">
           <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
@@ -117,7 +147,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={template1}
-              alt="proyecto-2"
+              alt="Template"
             />
           </a>
         </div>
@@ -147,7 +177,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={pokeapi}
-              alt="proyecto-8"
+              alt="Pokedex"
             />
           </div>{" "}
         </a>
@@ -180,7 +210,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={modocv2}
-              alt="proyecto-7"
+              alt="Modo-Cromatico"
             />
           </div>
         </a>
@@ -188,7 +218,7 @@ const Projects = () => {
           {" "}
           <div className="relative mb-2">
             <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">Landing page para artista musical.</p>
+              <p className="text-center">Landing page artista musical.</p>
             </div>
             <div className="flex items-center w-full gap-1 rounded-xl mb-2">
               <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
@@ -207,7 +237,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={nicking}
-              alt="proyecto-3"
+              alt="Nicking"
             />
           </div>{" "}
         </a>
@@ -236,7 +266,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={shirley}
-              alt="proyecto-4"
+              alt="Shirley-Nailss"
             />
           </div>
         </a>
@@ -263,7 +293,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={calculadora}
-              alt="proyecto-5"
+              alt="Calculadora-js"
             />
           </div>{" "}
         </a>
@@ -291,7 +321,7 @@ const Projects = () => {
             <img
               className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
               src={matt}
-              alt="proyecto-6"
+              alt="Matt-Armoa"
             />
           </div>{" "}
         </a>
