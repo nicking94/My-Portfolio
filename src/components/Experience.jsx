@@ -13,12 +13,13 @@ const Experience = () => {
       <div className="border-l-2 border-gray-600 pl-7 ml-[37px] md:ml-[37px]">
         <div className="text-gray-300">
           <h3 className="text-[1rem] md:text-[1.3rem] text-yellow-200">
-            Desarrollo De Proyectos Freelance | [Noviembre 2022] -{" "}
-            <span className="text-blue-200">Actualmente...</span>
+            Desarrollo De Proyectos Freelance{" "}
+            <span className="text-white">|</span>{" "}
+            <span className="text-blue-200"> Agosto 2022 - Actualidad</span>
           </h3>
           <p className="text-[.8rem] md:text-[1rem] mt-3">
             Desarrollo de proyectos web de manera proactiva y creativa con un
-            enfoque centrado en el usuario.
+            enfoque centrado en el usuario (UX/UI).
           </p>
         </div>
       </div>
