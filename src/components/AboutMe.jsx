@@ -1,4 +1,3 @@
-import React from "react";
 import { CgProfile } from "react-icons/cg";
 import profileImg from "../assets/profileImg.jpg";
 
@@ -6,15 +5,15 @@ const AboutMe = () => {
   return (
     <section id="sobre-mi" className="mt-10 px-7">
       <div className="flex">
-        <div className="gap-1 w-full flex flex-col items-center">
-          <div className="flex flex-col items-center gap-3 mb-6 w-full ">
-            <CgProfile className="text-white text-3xl" />
-            <h1 className="text-gray-200 text-[1.5rem] md:text-3xl font-semibold">
+        <div className="flex w-full flex-col items-center gap-1">
+          <div className="mb-6 flex w-full flex-col items-center gap-3">
+            <CgProfile className="text-3xl text-white" />
+            <h1 className="text-[1.5rem] font-semibold text-gray-200 md:text-3xl">
               Sobre mi
             </h1>
           </div>
-          <div className="flex flex-col md:grid md:grid-cols-[500px_minmax(0px,_1fr)_10px] mb-20">
-            <p className="text-gray-100 text-[1rem] text-center text-pretty">
+          <div className="mb-20 flex flex-col md:grid md:grid-cols-[500px_minmax(0px,_1fr)_10px]">
+            <p className="text-pretty text-center text-[1rem] text-gray-100">
               Me llamo <span className="text-yellow-400">Nicolas</span> pero mis
               amigos me llaman Nicking. Empecé en la programación en Marzo de
               2022, aunque mi primer acercamiento al código fue a los 13 años
@@ -23,10 +22,9 @@ const AboutMe = () => {
               <br /> Actualmente me encuentro enfocado en el{" "}
               <span className="text-yellow-400">desarrollo web</span>{" "}
               aprendiendo nuevas tecnologias y especializandome en{" "}
-              <span className="text-yellow-400 font-serif">frontend</span> para
+              <span className="font-serif text-yellow-400">frontend</span> para
               luego aprender más sobre{" "}
-              <span className="text-green-400 font-serif ">backend</span>.{" "}
-              <br />
+              <span className="font-serif text-green-400">backend</span>. <br />
               <br />
               Mi objetivo es poder{" "}
               <span className="text-yellow-400">
@@ -37,9 +35,9 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className=" flex items-center">
+        <div className="flex items-center">
           <img
-            className="w-50 h-50 rounded-full hidden md:block"
+            className="w-50 h-50 hidden rounded-full md:block"
             src={profileImg}
             alt="image-profile"
           />

@@ -1,331 +1,254 @@
-import React from "react";
-import { PiCode } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
+{
+  /* Icons */
+}
+import { FaArrowRight } from "react-icons/fa";
+import { PiCode } from "react-icons/pi";
 import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
-import { BsBootstrapFill } from "react-icons/bs";
 import { DiJqueryLogo } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
+
 {
   /* Screenshots webs */
 }
 import ecommerce from "../assets/ecommerce.png";
-import StHelen from "../assets/St_Helen.png"
-import calculadora from "../assets/calculadora.png";
 import drgula from "../assets/drgula.png";
-import matt from "../assets/matt.png";
+import StHelen from "../assets/St_Helen.png";
+import universalWeb from "../assets/universal_web.png";
+import calculadoraDeGastos from "../assets/calculadora_de_gastos.png";
 import modocv2 from "../assets/modocv2.png";
-import nicking from "../assets/nicking.png";
-import pokeapi from "../assets/pokeapi.png";
-import shirley from "../assets/shirley.png";
-import template1 from "../assets/template1.png";
 
 const Projects = () => {
+  const navigate = useNavigate();
+
+  const handleRedirect = (page) => {
+    navigate(page);
+  };
   return (
-    <section id="proyectos" className="px-7">
-      <div className="flex mt-14 md:mt-28 gap-4 font-semibold">
-        <PiCode className="text-text text-3xl" />
-        <h1 className="text-gray-200 text-[1.5rem] md:text-3xl mb-4">
-          Proyectos Recientes
+    <section id="proyectos" className="mt-10 px-7">
+      <div className="flex gap-4 font-semibold md:mt-28">
+        <PiCode className="mt-10 text-3xl text-text" />
+        <h1 className="mb-4 mt-10 text-[1.5rem] text-gray-200 md:text-3xl">
+          Proyectos Destacados
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2 px-7 py-5 bg-secondary rounded-lg">
-        <a href="https://dieteticadiamante.netlify.app/">
+      <div className="mt-2 grid grid-cols-1 gap-8 rounded-lg bg-secondary px-7 py-5 md:grid-cols-2">
+        <a
+          href="https://dieteticadiamante.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="relative mb-2">
-          <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+            <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/95 px-3 py-[2px] text-center text-[15px] font-medium text-white">
               <p className="text-center">
-                E-commerce con carro de compras. Diseño de Figma a código.
+                E-commerce | Diseño de Figma a código.
               </p>
             </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+            <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
+              <FaHtml5 className="text-[1rem] text-red-600 md:md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 HTML
               </span>
-              <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 TAILWIND
               </span>
-              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px]">
+              <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
+              <span className="text-[.4rem] text-white md:text-[15px]">
                 JAVASCRIPT
               </span>
-              <DiJqueryLogo className="text-blue-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <DiJqueryLogo className="text-[1rem] text-blue-600 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 JQUERY
               </span>
             </div>
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={ecommerce}
-              alt="Diamante-Natural"
-            />
-          </div>{" "}
-        </a>
-        <a href="https://drgula.netlify.app/">
-          {" "}
-          <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">
-                Landing page para hamburguesería.
-              </p>
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={ecommerce}
+                alt="Diamante-Natural"
+              />
             </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+          </div>
+        </a>
+        <a
+          href="https://drgula.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="relative mb-2">
+            <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/80 px-3 py-[2px] text-center text-[15px] font-medium text-white">
+              <p className="text-center">Landing page</p>
+            </div>
+            <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
+              <FaHtml5 className="text-[1rem] text-red-600 md:md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 HTML
               </span>
-              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />{" "}
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 CSS
               </span>
-              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px]">
+              <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
+              <span className="text-[.4rem] text-white md:text-[15px]">
                 JAVASCRIPT
               </span>
             </div>
-
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={drgula}
-              alt="Dr-Gula"
-            />
-          </div>{" "}
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={drgula}
+                alt="Dr-Gula"
+              />
+            </div>
+          </div>
         </a>
 
-
         <div className="relative mb-2">
-          <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-            <p className="text-center">Web English Institute.</p>
+          <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/90 px-3 py-[2px] text-center text-[15px] font-medium text-white">
+            <p className="text-center">Web Institucional + Campus</p>
           </div>
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+          <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
+            <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
+            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
               HTML
             </span>
-            <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+            <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
+            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
               TAILWIND
             </span>
-            <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                JAVASCRIPT
-              </span>
-          </div>
-          <a href="https://sthelen.netlify.app">
-            {" "}
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={StHelen}
-              alt="St-Helen"
-            />
-          </a>
-        </div>
-
-        <div className="relative mb-2">
-          <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-            <p className="text-center">Diseño de figma a código con React.</p>
-          </div>
-          <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-            <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-              HTML
-            </span>
-            <FaReact className="text-blue-500 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-              REACT
-            </span>
-            <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
-            <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-              TAILWIND
+            <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
+            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+              JAVASCRIPT
             </span>
           </div>
-          <a href="https://template-nk.netlify.app/">
-            {" "}
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={template1}
-              alt="Template"
-            />
-          </a>
-        </div>
-        <a href="https://pokedex-nk.netlify.app/">
-          {" "}
-          <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">
-                Práctica de consumo de API creando una pokedex.
-              </p>
+          <a
+            href="https://sthelen.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={StHelen}
+                alt="St-Helen"
+              />
             </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+          </a>
+        </div>
+        <a
+          href="https://universalweb-nk.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="relative mb-2">
+            <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/80 px-3 py-[2px] text-center text-[15px] font-medium text-white">
+              <p className="text-center">Landing page</p>
+            </div>
+            <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
+              <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 HTML
               </span>
-              <FaReact className="text-blue-500 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+
+              <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                TAILWIND
+              </span>
+              <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                JAVASCRIPT
+              </span>
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={universalWeb}
+                alt="universalweb"
+              />
+            </div>
+          </div>
+        </a>
+        <a
+          href="https://calculadora-gastos-nk.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="relative mb-2">
+            <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/95 px-3 py-[2px] text-center text-[15px] font-medium text-white">
+              <p className="text-center">Calculadora de gastos</p>
+            </div>
+            <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
+              <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 REACT
               </span>
-              <SiTailwindcss className="text-green-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 TAILWIND
               </span>
             </div>
-
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={pokeapi}
-              alt="Pokedex"
-            />
-          </div>{" "}
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={calculadoraDeGastos}
+                alt="Matt-Armoa"
+              />
+            </div>
+          </div>
         </a>
-        <a href="https://modocromatico.netlify.app/">
-          {" "}
+
+        <a
+          href="https://modocromatico.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
+            <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/80 px-3 py-[2px] text-center text-[15px] font-medium text-white">
               <p className="text-center">
                 Landing page para negocio de sublimaciones.
               </p>
             </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+            <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
+              <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 HTML
               </span>
-              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 CSS
               </span>
-              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 JAVASCRIPT
               </span>
-              <DiJqueryLogo className="text-blue-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
+              <DiJqueryLogo className="text-[1rem] text-blue-600 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 JQUERY
               </span>
-            </div>{" "}
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={modocv2}
-              alt="Modo-Cromatico"
-            />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={modocv2}
+                alt="Modo-Cromatico"
+              />
+            </div>
           </div>
         </a>
-        <a href="https://nicking.netlify.app/">
-          {" "}
-          <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/80 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">Landing page artista musical.</p>
-            </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                HTML
-              </span>
-              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                CSS
-              </span>
-              <BsBootstrapFill className="text-violet-500 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                BOOTSTRAP
-              </span>
-            </div>{" "}
-            <img
-              className="w-full hover:scale-110 duration-300 border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={nicking}
-              alt="Nicking"
-            />
-          </div>{" "}
-        </a>
-        <a href="https://shirley-nailss.netlify.app/">
-          {" "}
-          <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/90 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">
-                Landing page para local de realización de uñas.
-              </p>
-            </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                HTML
-              </span>
-              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                CSS
-              </span>
-              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                JAVASCRIPT
-              </span>
-            </div>{" "}
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={shirley}
-              alt="Shirley-Nailss"
-            />
-          </div>
-        </a>
-        <a href="https://calculadora-js-nk.netlify.app/">
-          {" "}
-          <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">Calculadora.</p>
-            </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                HTML
-              </span>
-              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                CSS
-              </span>
-              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                JAVASCRIPT
-              </span>
-            </div>{" "}
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={calculadora}
-              alt="Calculadora-js"
-            />
-          </div>{" "}
-        </a>
-        <a href="https://mattarmoagaming.netlify.app/">
-          {" "}
-          <div className="relative mb-2">
-            <div className="absolute z-10 w-full h-12 flex justify-center items-center text-center bg-tertiary/95 text-white rounded-xl px-3 py-[2px] font-medium top-36 text-pretty text-[15px]">
-              <p className="text-center">Landing page para Streamer.</p>
-            </div>
-            <div className="flex items-center w-full gap-1 rounded-xl mb-2">
-              <FaHtml5 className="text-red-600 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                HTML
-              </span>
-              <IoLogoCss3 className="text-blue-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                CSS
-              </span>
-              <IoLogoJavascript className="text-yellow-300 text-[1rem] md:text-2xl" />
-              <span className="text-white text-[.4rem] md:text-[15px] mr-1">
-                JAVASCRIPT
-              </span>
-            </div>
-
-            <img
-              className="w-full hover:scale-110 duration-300 rounded-xl border-2 border-tertiary h-40 shadow-md shadow-tertiary"
-              src={matt}
-              alt="Matt-Armoa"
-            />
-          </div>{" "}
-        </a>
-        
+      </div>
+      <div className="flex items-center justify-center py-5">
+        <button
+          onClick={() => handleRedirect("/proyectos")}
+          className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-2 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600 md:w-2/3"
+        >
+          VER MÁS PROYECTOS
+          <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
+        </button>
       </div>
     </section>
   );
