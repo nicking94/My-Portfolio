@@ -22,24 +22,38 @@ const Header = () => {
     <header className="flex items-center justify-end p-4 md:w-full md:justify-center">
       {/* Menú de navegación en escritorio */}
       <nav
-        className={`fixed z-20 mt-2 hidden rounded-full bg-secondary px-2 py-1 text-[.9rem] font-medium text-gray-200 md:mt-5 md:flex md:px-8 md:text-[1.1rem] ${
-          isScrolled ? "bg-tertiary/60 underline backdrop-blur-md" : ""
+        className={`fixed z-20 mt-2 hidden space-x-4 rounded-full bg-secondary px-2 py-3 text-[.9rem] font-medium text-gray-200 md:mt-10 md:flex md:px-10 md:text-[1.2rem] ${
+          isScrolled
+            ? "bg-tertiary/60 shadow-md shadow-gray-800 backdrop-blur-md"
+            : ""
         } `}
       >
-        <a className="rounded-xl px-3 hover:bg-tertiary" href="/">
+        <a
+          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          href="/"
+        >
           Inicio
         </a>
-        <a className="rounded-xl px-3 hover:bg-tertiary" href="/#experiencia">
+        <a
+          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          href="/#experiencia"
+        >
           Experiencia
         </a>
-        <a className="rounded-xl px-3 hover:bg-tertiary" href="/#proyectos">
+        <a
+          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          href="/#proyectos"
+        >
           Proyectos
         </a>
-        <a className="rounded-xl px-3 hover:bg-tertiary" href="/#sobre-mi">
+        <a
+          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          href="/#sobre-mi"
+        >
           Sobre mí
         </a>
         <a
-          className="rounded-xl px-3 hover:bg-tertiary"
+          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
           href="https://wa.me/+5492613077147"
           target="_blank"
           rel="noopener noreferrer"
@@ -51,12 +65,12 @@ const Header = () => {
       {/* Menú de navegación en móvil */}
       {isOpen != true ? (
         <IoMdMenu
-          className="fixed z-30 mr-2 mt-4 text-2xl text-white md:hidden"
+          className="fixed z-30 mr-2 mt-4 text-2xl text-white shadow-xl shadow-tertiary md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         />
       ) : (
         <IoMdClose
-          className="fixed z-30 mr-2 mt-4 text-2xl text-white md:hidden"
+          className="fixed z-30 mr-2 mt-4 text-2xl text-white shadow-xl shadow-gray-800 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         />
       )}

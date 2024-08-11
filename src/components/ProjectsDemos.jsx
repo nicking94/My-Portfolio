@@ -1,16 +1,11 @@
-{
-  /* Icons */
-}
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import ProjectsSelector from "./ProjectsSelector";
 import { FaArrowRight } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io5";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact } from "react-icons/fa";
+import { FaHtml5, FaReact } from "react-icons/fa";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io5";
 import { BsBootstrapFill } from "react-icons/bs";
 import { SiTailwindcss } from "react-icons/si";
-{
-  /* Screenshots webs */
-}
 import listadoPeliculas from "../assets/listado_peliculas.png";
 import pokeapi from "../assets/pokeapi.png";
 import listatareas from "../assets/listatareas.png";
@@ -21,331 +16,245 @@ import calculadora from "../assets/calculadora.png";
 import matt from "../assets/matt.png";
 import nicking from "../assets/nicking.png";
 import shirley from "../assets/shirley.png";
+import colorPicker from "../assets/color_picker.png";
+import backgroundColorPicker from "../assets/background_color_picker.png";
+import citasMotivacionales from "../assets/citas_motivacionales.png";
+import drawingApp from "../assets/drawing_app.png";
 
-const ProjectsDEMOs = () => {
+const projectsData = [
+  {
+    id: 1,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: drawingApp,
+    alt: "drawingapp",
+    title: "App de dibujo",
+    demoLink: "https://appdibujo-nk.netlify.app/",
+  },
+  {
+    id: 2,
+    type: "ejercicio",
+    technologies: ["react", "tailwind"],
+    image: listadoPeliculas,
+    alt: "listadoPeliculas",
+    title: "Listado de películas",
+    demoLink: "https://movie-app-nk.netlify.app",
+  },
+  {
+    id: 3,
+    type: "ejercicio",
+    technologies: ["react", "tailwind"],
+    image: pokeapi,
+    alt: "pokeapi",
+    title: "Consumo de API PokéApi",
+    demoLink: "https://pokedex-nk.netlify.app",
+  },
+  {
+    id: 4,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: calculadora,
+    alt: "calculadora",
+    title: "Calculadora",
+    demoLink: "https://calculadora-js-nk.netlify.app",
+  },
+  {
+    id: 5,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: listatareas,
+    alt: "listatareas",
+    title: "Lista de tareas",
+    demoLink: "https://lista-tareas-js-nk.netlify.app",
+  },
+  {
+    id: 6,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: cronometro,
+    alt: "cronometro",
+    title: "Cronómetro",
+    demoLink: "https://cronometro-nk.netlify.app",
+  },
+  {
+    id: 7,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: citasMotivacionales,
+    alt: "citasMotivacionales",
+    title: "Citas Motivacionales",
+    demoLink: "https://frases-motivacionales-nk.netlify.app",
+  },
+  {
+    id: 8,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: colorPicker,
+    alt: "colorPicker",
+    title: "Color Picker",
+    demoLink: "https://color-picker-nk.netlify.app",
+  },
+  {
+    id: 9,
+    type: "ejercicio",
+    technologies: ["html", "css", "javascript"],
+    image: backgroundColorPicker,
+    alt: "backgroundColorPicker",
+    title: "Background Color Picker",
+    demoLink: "https://background-color-picker-nk.netlify.app",
+  },
+  {
+    id: 10,
+    type: "proyecto",
+    technologies: ["react", "tailwind"],
+    image: template1,
+    alt: "template1",
+    title: "Landing Page 1",
+    demoLink: "https://templatestartup-nk.netlify.app/",
+  },
+  {
+    id: 11,
+    type: "proyecto",
+    technologies: ["react", "tailwind"],
+    image: template2,
+    alt: "template2",
+    title: "Landing Page 2",
+    demoLink: "https://templateinmobiliarias-nk.netlify.app/",
+  },
+  {
+    id: 12,
+    type: "proyecto",
+    technologies: ["html", "css", "javascript"],
+    image: matt,
+    alt: "matt",
+    title: "Landing Page Matt Armoa Gaming",
+    demoLink: "https://mattarmoagaming.netlify.app",
+  },
+  {
+    id: 13,
+    type: "proyecto",
+    technologies: ["html", "bootstrap"],
+    image: nicking,
+    alt: "nicking",
+    title: "Landing Page Nicking",
+    demoLink: "https://nicking.netlify.app",
+  },
+  {
+    id: 14,
+    type: "proyecto",
+    technologies: ["html", "css", "javascript"],
+    image: shirley,
+    alt: "shirley",
+    title: "Landing Page Shirley Nakari",
+    demoLink: "https://shirleynakari.netlify.app",
+  },
+];
+
+const ProjectsDemos = () => {
+  const [filter, setFilter] = useState("all");
+  const pathName = useLocation();
+
+  const handleSelect = (filter) => {
+    setFilter(filter);
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathName]);
+
+  const filteredProjects = projectsData.filter((project) => {
+    if (filter === "all") {
+      return true;
+    }
+    return project.type === filter;
+  });
+
   return (
-    <div className="flex flex-col items-center space-y-10 px-6 py-5 md:px-36">
-      <div className="grid grid-cols-1 gap-8 rounded-lg bg-secondary px-7 py-5 text-gray-200 md:mt-14 md:grid-cols-3">
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              REACT
-            </span>
-            <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              TAILWIND
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={listadoPeliculas}
-              alt="listadoPeliculas"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">
-            Listado de películas
-          </p>
-          <a
-            href="https://movie-app-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
+    <div className="flex flex-col items-center space-y-10 px-6 py-5">
+      <ProjectsSelector onSelect={handleSelect} />
+      <div
+        id="projects-container"
+        className="grid grid-cols-1 gap-8 rounded-lg bg-secondary px-7 py-5 text-gray-200 md:mt-14 md:grid-cols-3"
+      >
+        {filteredProjects.map((project) => (
+          <div
+            key={project.id}
+            className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800"
           >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              REACT
-            </span>
-            <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              TAILWIND
-            </span>
+            <div className="flex w-full items-center gap-1 rounded-xl">
+              {project.technologies.includes("html") && (
+                <>
+                  <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    HTML
+                  </span>
+                </>
+              )}
+              {project.technologies.includes("css") && (
+                <>
+                  <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    CSS
+                  </span>
+                </>
+              )}
+              {project.technologies.includes("javascript") && (
+                <>
+                  <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    JAVASCRIPT
+                  </span>
+                </>
+              )}
+              {project.technologies.includes("react") && (
+                <>
+                  <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    REACT
+                  </span>
+                </>
+              )}
+              {project.technologies.includes("tailwind") && (
+                <>
+                  <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    TAILWIND
+                  </span>
+                </>
+              )}
+              {project.technologies.includes("bootstrap") && (
+                <>
+                  <BsBootstrapFill className="text-[1rem] text-violet-500 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    BOOTSTRAP
+                  </span>
+                </>
+              )}
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <img
+                className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
+                src={project.image}
+                alt={project.alt}
+              />
+            </div>
+            <p className="text-pretty text-[1rem] text-gray-100">
+              {project.title}
+            </p>
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
+            >
+              DEMO
+              <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
+            </a>
           </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={pokeapi}
-              alt="pokeapi"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">
-            Consumo de API PokéApi
-          </p>
-          <a
-            href="https://pokedex-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              HTML
-            </span>
-            <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              CSS
-            </span>
-            <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              JAVASCRIPT
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={calculadora}
-              alt="calculadora"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Calculadora</p>
-          <a
-            href="https://calculadora-js-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
-            <FaHtml5 className="text-[1rem] text-red-600 md:md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              HTML
-            </span>
-            <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              CSS
-            </span>
-            <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
-            <span className="text-[.4rem] text-white md:text-[15px]">
-              JAVASCRIPT
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={listatareas}
-              alt="listatareas"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">
-            Lista de tareas
-          </p>
-          <a
-            href="https://lista-tareas-js-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
-            <FaHtml5 className="text-[1rem] text-red-600 md:md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              HTML
-            </span>
-            <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              CSS
-            </span>
-            <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
-            <span className="text-[.4rem] text-white md:text-[15px]">
-              JAVASCRIPT
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={cronometro}
-              alt="cronometro"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Cronómetro</p>
-          <a
-            href="https://cronometro-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              REACT
-            </span>
-            <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              TAILWIND
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={template2}
-              alt="template2"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Landing Page</p>
-          <a
-            href="https://template-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              HTML
-            </span>
-            <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              CSS
-            </span>
-            <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              JAVASCRIPT
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={matt}
-              alt="matt"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Landing Page</p>
-          <a
-            href="https://mattarmoagaming.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              HTML
-            </span>
-            <BsBootstrapFill className="text-[1rem] text-violet-500 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              BOOTSTRAP
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={nicking}
-              alt="nicking"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Landing Page</p>
-          <a
-            href="https://nicking.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              HTML
-            </span>
-            <IoLogoCss3 className="text-[1rem] text-blue-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              CSS
-            </span>
-            <IoLogoJavascript className="text-[1rem] text-yellow-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              JAVASCRIPT
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={shirley}
-              alt="shirley"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Landing Page</p>
-          <a
-            href="https://shirley-nailss.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800">
-          <div className="flex w-full items-center gap-1 rounded-xl">
-            <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              REACT
-            </span>
-            <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
-            <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-              TAILWIND
-            </span>
-          </div>
-          <div className="overflow-hidden rounded-xl">
-            <img
-              className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-              src={template1}
-              alt="template1"
-            />
-          </div>
-          <p className="text-pretty text-[1rem] text-gray-100">Landing Page</p>
-          <a
-            href="https://template-nk.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
-          >
-            DEMO
-            <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />
-          </a>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default ProjectsDEMOs;
+export default ProjectsDemos;

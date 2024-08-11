@@ -6,7 +6,6 @@ const ProjectsView = () => {
   return (
     <>
       <div className="h-full min-h-[100vh] w-full bg-gradient-to-tr from-secondary to-primary font-roboto">
-        <Header />
         <ProjectsDemos />
         <Footer />
       </div>
