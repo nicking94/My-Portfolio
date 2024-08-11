@@ -24,36 +24,36 @@ const Header = () => {
       <nav
         className={`fixed z-20 mt-2 hidden space-x-4 rounded-full bg-secondary px-2 py-3 text-[.9rem] font-medium text-gray-200 md:mt-10 md:flex md:px-10 md:text-[1.2rem] ${
           isScrolled
-            ? "bg-tertiary/60 shadow-md shadow-gray-800 backdrop-blur-md"
+            ? "bg-secondary/60 shadow-md shadow-green-900 backdrop-blur-md"
             : ""
         } `}
       >
         <a
-          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          className="rounded-md px-4 py-1 transition-all duration-300 hover:bg-green-600"
           href="/"
         >
           Inicio
         </a>
         <a
-          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          className="rounded-md px-4 py-1 transition-all duration-300 hover:bg-green-600"
           href="/#experiencia"
         >
           Experiencia
         </a>
         <a
-          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          className="rounded-md px-4 py-1 transition-all duration-300 hover:bg-green-600"
           href="/#proyectos"
         >
           Proyectos
         </a>
         <a
-          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          className="rounded-md px-4 py-1 transition-all duration-300 hover:bg-green-600"
           href="/#sobre-mi"
         >
           Sobre mí
         </a>
         <a
-          className="rounded-xl px-3 transition-all duration-300 hover:bg-tertiary"
+          className="rounded-md px-4 py-1 transition-all duration-300 hover:bg-green-600"
           href="https://wa.me/+5492613077147"
           target="_blank"
           rel="noopener noreferrer"

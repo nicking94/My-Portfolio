@@ -24,7 +24,7 @@ const AboutMe = () => {
               aprendiendo nuevas tecnologias y especializandome en{" "}
               <span className="font-serif text-yellow-400">frontend</span> para
               luego aprender más sobre{" "}
-              <span className="font-serif text-green-400">backend</span>. <br />
+              <span className="font-serif text-green-600">backend</span>. <br />
               <br />
               Mi objetivo es poder{" "}
               <span className="text-yellow-400">
