@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaHtml5, FaReact } from "react-icons/fa";
 import { IoLogoCss3, IoLogoJavascript } from "react-icons/io5";
 import { BsBootstrapFill } from "react-icons/bs";
+import { DiJqueryLogo } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
 import listadoPeliculas from "../assets/listado_peliculas.png";
 import pokeapi from "../assets/pokeapi.png";
@@ -16,10 +17,15 @@ import calculadora from "../assets/calculadora.png";
 import matt from "../assets/matt.png";
 import nicking from "../assets/nicking.png";
 import shirley from "../assets/shirley.png";
+import componentsLibrary from "../assets/components_library.png";
+import drgula from "../assets/drgula.png";
 import colorPicker from "../assets/color_picker.png";
 import backgroundColorPicker from "../assets/background_color_picker.png";
 import citasMotivacionales from "../assets/citas_motivacionales.png";
 import drawingApp from "../assets/drawing_app.png";
+import universalWeb from "../assets/universal_web.png";
+import ecommerce from "../assets/ecommerce.png";
+import grhousing from "../assets/grhousing_web.png";
 
 const projectsData = [
   {
@@ -83,7 +89,7 @@ const projectsData = [
     image: citasMotivacionales,
     alt: "citasMotivacionales",
     title: "Citas Motivacionales",
-    demoLink: "https://frases-motivacionales-nk.netlify.app",
+    demoLink: "https://citas-motivacionales-nk.netlify.app/",
   },
   {
     id: 8,
@@ -101,7 +107,7 @@ const projectsData = [
     image: backgroundColorPicker,
     alt: "backgroundColorPicker",
     title: "Background Color Picker",
-    demoLink: "https://background-color-picker-nk.netlify.app",
+    demoLink: "https://background-color-nk.netlify.app/",
   },
   {
     id: 10,
@@ -110,7 +116,7 @@ const projectsData = [
     image: template1,
     alt: "template1",
     title: "Landing Page 1",
-    demoLink: "https://templatestartup-nk.netlify.app/",
+    demoLink: "https://template-nk.netlify.app/",
   },
   {
     id: 11,
@@ -145,13 +151,58 @@ const projectsData = [
     technologies: ["html", "css", "javascript"],
     image: shirley,
     alt: "shirley",
-    title: "Landing Page Shirley Nakari",
-    demoLink: "https://shirleynakari.netlify.app",
+    title: "Landing Page Shirley Nailss",
+    demoLink: "https://shirley-nailss.netlify.app/",
+  },
+  {
+    id: 15,
+    type: "proyecto",
+    technologies: ["react", "tailwind"],
+    image: componentsLibrary,
+    alt: "components library",
+    title: "Librería de componentes",
+    demoLink: "https://componentslibrary-nk.netlify.app/",
+  },
+  {
+    id: 16,
+    type: "proyecto",
+    technologies: ["html", "css", "javascript"],
+    image: drgula,
+    alt: "Dr Gula",
+    title: "Landing page hamburguesería",
+    demoLink: "https://drgula.netlify.app/",
+  },
+  {
+    id: 17,
+    type: "proyecto",
+    technologies: ["html", "css", "javascript"],
+    image: universalWeb,
+    alt: "Universal web",
+    title: "Landing page Universal Web",
+    demoLink: "https://drgula.netlify.app/",
+  },
+  {
+    id: 18,
+    type: "proyecto",
+    technologies: ["html", "tailwind", "javascript", "jquery"],
+    image: ecommerce,
+    alt: "ecommerce diamante natural",
+    title: "Ecommerce Diamante Natural",
+    demoLink: "https://dieteticadiamante.netlify.app/",
+  },
+  {
+    id: 19,
+    type: "proyecto",
+    technologies: ["html", "tailwind", "javascript"],
+    image: grhousing,
+    alt: "grhousing",
+    title: "Landing page inmobiliaria",
+    demoLink: "https://grhousing-demo-nk.netlify.app/",
   },
 ];
 
 const ProjectsDemos = () => {
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("proyecto");
   const pathName = useLocation();
 
   const handleSelect = (filter) => {
@@ -162,12 +213,14 @@ const ProjectsDemos = () => {
     window.scrollTo(0, 0);
   }, [pathName]);
 
-  const filteredProjects = projectsData.filter((project) => {
-    if (filter === "all") {
-      return true;
-    }
-    return project.type === filter;
-  });
+  const filteredProjects = projectsData
+    .filter((project) => {
+      if (filter === "all") {
+        return true;
+      }
+      return project.type === filter;
+    })
+    .reverse();
 
   return (
     <div className="flex flex-col items-center space-y-10 px-6 py-5">
@@ -230,6 +283,14 @@ const ProjectsDemos = () => {
                   </span>
                 </>
               )}
+              {project.technologies.includes("jquery") && (
+                <>
+                  <DiJqueryLogo className="text-[1rem] text-blue-600 md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    JQUERY
+                  </span>
+                </>
+              )}
             </div>
             <div className="overflow-hidden rounded-xl">
               <img
@@ -245,7 +306,7 @@ const ProjectsDemos = () => {
               href={project.demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
+              className="flex w-[40%] animate-pulse items-center justify-center gap-x-2 rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200 transition-all duration-500 hover:scale-105 hover:bg-green-600"
             >
               DEMO
               <FaArrowRight className="md:text-md text-[.8rem] text-green-300" />

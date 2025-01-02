@@ -3,7 +3,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
 
 const ProjectsSelector = ({ onSelect }) => {
-  const [isActive, setIsActive] = useState(null);
+  const [isActive, setIsActive] = useState("proyecto");
   const navigate = useNavigate();
 
   const handleActive = (button) => {

@@ -10,7 +10,8 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiPostman } from "react-icons/si";
 import { GiOpenBook } from "react-icons/gi";
 import { FaGitSquare } from "react-icons/fa";
-
+import { SiNextui } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 const Abilities = () => {
   return (
     <div className="mx-auto mt-16 flex w-[86%] flex-col md:w-full md:p-7">
@@ -56,6 +57,14 @@ const Abilities = () => {
         <div className="flex flex-col items-center gap-1">
           <h5 className="text-gray-200 md:text-[1rem]">Html</h5>
           <FaHtml5 className="text-[2rem] text-red-600 md:text-[4rem]" />
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <h5 className="text-gray-200 md:text-[1rem]">NextJs</h5>
+          <SiNextdotjs className="text-[2rem] text-white md:text-[4rem]" />
+        </div>
+        <div className="flex flex-col items-center gap-1">
+          <h5 className="text-gray-200 md:text-[1rem]">NextUI</h5>
+          <SiNextui className="text-[2rem] text-white md:text-[4rem]" />
         </div>
         <div className="flex flex-col items-center gap-1">
           <h5 className="text-gray-200 md:text-[1rem]">Pronto...</h5>

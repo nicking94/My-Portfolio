@@ -4,6 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 
 const Hero = () => {
+  const available = true;
   return (
     <section className="mt-16 pl-7 pr-7 md:mt-48">
       <img
@@ -11,7 +12,7 @@ const Hero = () => {
         src={profileImg}
         alt="profile-image"
       />
-      <div className="flex flex-col items-center font-semibold tracking-widest lg:flex-row">
+      <div className="flex flex-col items-center font-semibold tracking-widest xl:flex-row">
         <h1 className="mb-2 mr-0 text-center text-[2.2rem] text-white md:mr-4 md:text-[3rem]">
           Hey, Soy Nicking
         </h1>
@@ -20,8 +21,16 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="cursor-default rounded-full border-2 border-green-600 bg-secondary px-4 py-1 text-[.8rem] text-gray-200">
-            Disponible para trabajar
+          <button
+            className={`cursor-default rounded-full border-2 ${available ? "border-green-600" : "border-red-600"} bg-secondary px-4 py-1 text-[.6rem] text-gray-200 md:text-[.8rem]`}
+          >
+            <span className={available ? "text-white" : "text-gray-500"}>
+              Disponible para trabajar{" "}
+            </span>{" "}
+            |{" "}
+            <span className={available ? "text-gray-500" : "text-white"}>
+              Trabajando actualmente
+            </span>
           </button>
         </a>
       </div>
