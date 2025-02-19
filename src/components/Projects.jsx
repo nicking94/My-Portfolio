@@ -11,6 +11,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
 import { DiJqueryLogo } from "react-icons/di";
 import { SiTailwindcss } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
 
 {
   /* Screenshots webs */
@@ -19,8 +20,8 @@ import ecommerce from "../assets/ecommerce.png";
 import drgula from "../assets/drgula.png";
 import StHelen from "../assets/St_Helen.png";
 import calculadoraDeGastos from "../assets/calculadora_de_gastos.png";
-import componentsLibrary from "../assets/components_library.png";
 import grhousing from "../assets/grhousing_web.png";
+import novexis from "../assets/novexis_web.png";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -38,33 +39,38 @@ const Projects = () => {
       </div>
       <div className="mt-2 grid grid-cols-1 gap-8 rounded-lg bg-secondary px-7 py-5 md:grid-cols-2">
         <a
-          href="https://componentslibrary-nk.netlify.app/"
+          href="https://novexis-landing.vercel.app/home"
           target="_blank"
           rel="noopener noreferrer"
         >
           <div className="relative mb-2">
             <div className="absolute top-36 z-10 flex h-12 w-full items-center justify-center text-pretty rounded-xl bg-tertiary/95 px-3 py-[2px] text-center text-[15px] font-medium text-white">
-              <p className="text-center">Librería de componentes</p>
+              <p className="text-center">Landing Page Novexis</p>
             </div>
             <div className="mb-2 flex w-full items-center gap-1 rounded-xl">
-              <FaReact className="text-[1rem] text-blue-500 md:text-2xl" />
+              <SiNextdotjs className="text-[1rem] text-white md:text-2xl" />
               <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
-                REACT
+                NEXT
               </span>
               <SiTailwindcss className="text-[1rem] text-green-300 md:text-2xl" />
               <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
                 TAILWIND
               </span>
+              <IoLogoCss3 className="text-[1rem] text-blue-400 md:text-2xl" />
+              <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                CSS
+              </span>
             </div>
             <div className="overflow-hidden rounded-xl">
               <img
                 className="h-40 w-full rounded-xl shadow-md shadow-tertiary duration-300 hover:scale-110"
-                src={componentsLibrary}
-                alt="components Library"
+                src={novexis}
+                alt="Novexis"
               />
             </div>
           </div>
         </a>
+
         <a
           href="https://dieteticadiamante.netlify.app/"
           target="_blank"

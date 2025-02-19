@@ -26,18 +26,14 @@ const Hero = () => {
           >
             <span className={available ? "text-white" : "text-gray-500"}>
               Disponible para trabajar{" "}
-            </span>{" "}
-            |{" "}
-            <span className={available ? "text-gray-500" : "text-white"}>
-              Trabajando actualmente
             </span>
           </button>
         </a>
       </div>
       <div className="mt-4 md:mt-8">
         <h2 className="text-[1.2rem] text-gray-200 md:text-2xl">
-          +2 años de experiencia.
-          <span className="text-yellow-200"> Desarrollador web</span>
+          +3 años de experiencia.
+          <span className="text-yellow-200"> Desarrollador web frontend</span>
           <span className="text-green-300"> de Mendoza, Argentina</span>.
           <span className="text-blue-200">
             {" "}

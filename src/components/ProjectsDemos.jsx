@@ -26,6 +26,8 @@ import drawingApp from "../assets/drawing_app.png";
 import universalWeb from "../assets/universal_web.png";
 import ecommerce from "../assets/ecommerce.png";
 import grhousing from "../assets/grhousing_web.png";
+import novexis from "../assets/novexis_web.png";
+import { SiNextdotjs } from "react-icons/si";
 
 const projectsData = [
   {
@@ -199,6 +201,15 @@ const projectsData = [
     title: "Landing page inmobiliaria",
     demoLink: "https://grhousing-demo-nk.netlify.app/",
   },
+  {
+    id: 20,
+    type: "proyecto",
+    technologies: ["next", "tailwind", "css"],
+    image: novexis,
+    alt: "Novexis",
+    title: "Landing page Novexis",
+    demoLink: "https://novexis-landing.vercel.app/home",
+  },
 ];
 
 const ProjectsDemos = () => {
@@ -235,6 +246,15 @@ const ProjectsDemos = () => {
             className="flex flex-col items-center space-y-3 rounded p-4 shadow-md shadow-gray-800"
           >
             <div className="flex w-full items-center gap-1 rounded-xl">
+              {project.technologies.includes("next") && (
+                <>
+                  <SiNextdotjs className="text-[1rem] text-white md:text-2xl" />
+                  <span className="mr-1 text-[.4rem] text-white md:text-[15px]">
+                    NEXT
+                  </span>
+                </>
+              )}
+
               {project.technologies.includes("html") && (
                 <>
                   <FaHtml5 className="text-[1rem] text-red-600 md:text-2xl" />

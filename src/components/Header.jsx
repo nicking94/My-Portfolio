@@ -21,6 +21,11 @@ const Header = () => {
   return (
     <header className="flex items-center justify-end p-4 md:w-full md:justify-center">
       {/* Menú de navegación en escritorio */}
+      <div className="absolute left-0 top-0 p-2">
+        <p className="animate-pulse text-sm text-slate-500 underline">
+          Last Update: 19/02/2025
+        </p>
+      </div>
       <nav
         className={`fixed z-20 mt-2 hidden space-x-4 rounded-full bg-secondary px-2 py-3 text-[.9rem] font-medium text-gray-200 md:mt-10 md:flex md:px-10 md:text-[1.2rem] ${
           isScrolled
